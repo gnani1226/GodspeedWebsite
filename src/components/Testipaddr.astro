@@ -1,0 +1,23 @@
+---
+import fetch from 'node-fetch';
+const res = await fetch('https://api.ipify.org?format=json');
+const data = await res.json();
+const ipAddress = data.ip;
+const response_country = await fetch(`https://ipinfo.io/${ipAddress}/json`);
+const country_json = await response_country.json();
+
+const country = country_json.country;
+console.log(country)
+
+// const pricefromdb = await fetch(`http://localhost:3478/postgres/pricing/${country}`)
+// const justprice = await pricefromdb.json();
+---
+
+<!-- The purpose of the component is to get ipaddress of the user and fetch country and then from Godspeed running server it will fetch the price dynamically -->
+
+<div class="flex flex-col items-center">
+  <p class="text-red-500 block">Your Ip Address: {ipAddress}</p>
+  <p class="text-red-500">Your Country : {country}</p>
+</div>
+<div class="flex flex-col justify-center items-center mt-6">
+

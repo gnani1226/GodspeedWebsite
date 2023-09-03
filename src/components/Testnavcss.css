@@ -1,0 +1,13 @@
+/* Styles for the dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    /* border: 1px solid #ccc;
+    padding: 10px; */
+  }
+  
+  /* Show the dropdown when its parent button is clicked */
+  .navbar.active .dropdown-menu {
+    display: block;
+  }

@@ -1,12 +1,30 @@
 ---
-import HeroheadChange from './Headcolortoggle';
+import Getstarted from './Getstarted';
+import HeroheadChange from './HeroheadChange';
+import Changecolors from './Changecolors.astro';
 import './Reactcard.css';
 
 ---
 
 <section class="pb-12 flex flex-col justify-center items-center custom-section">
+  <!-- <h1 class="text-7xl mb-4 font-bold" id="headingChange">Airlift Your Tech Products</h1> -->
   <HeroheadChange client:load/>
-
+  <!-- <Changecolors /> -->
+  <!-- <h6 class="mt-4 text-2xl mb-8 leading-10">
+    Godspeed is a tech suite of tools, standards, integrations, abstractions,
+    teachings and best practices, all intricately weaved together with behind
+    the scenes magic.
+  </h6>
+  <div class="mt-12">
+    <a href="/meetsales" target="_blank">
+      <button
+        class="bg-white text-gray px-4 py-3  img-round"
+      >
+        Get started
+      </button>
+    </a>
+  </div> -->
+  <!--  -->
   <div
 
     class="flex flex-col gap-x-6 mt-6 gap-y-8 px-4 md:px-6 md:mt-10  lg:justify-between lg:items-center lg:mt-20"
@@ -16,6 +34,8 @@ import './Reactcard.css';
     >
       Used by top teams in tech:
     </p>
+    <!-- astro-5VUVVKEJ -->
+    <!-- gap-x-8 gap-y-6 px-4 -->
     <div class="flex flex-row flex-wrap items-center justify-center gap-2">
       <img
         src="https://res.cloudinary.com/dfuwiecz0/image/upload/v1692626920/Godspeed/ALM_19-A_LogoINT_4c_niey56.png"
@@ -66,6 +86,16 @@ import './Reactcard.css';
     align-items: center;
     text-align: center;
 
+    /* background-color: #ffffff; */
+
+    /* background: conic-gradient(#ff0000, #00ff00, #0000ff); */
+    /* background: conic-gradient(rgba(2,4,5,255),rgba(3,5,6,255),rgba(28,8,45,255),rgba(29,9,46,255),rgba(29,9,46,255)); */
+    /* background: radial-gradient(
+      ellipse farthest-corner at center,
+      #4a3579,
+      #181b20
+    ); */
+    /* background: radial-gradient(ellipse farthest-corner at center, rgba(28,8,65,255),rgba(2,4,5,255)); */
   }
 
   .custom-section {
@@ -85,3 +115,32 @@ import './Reactcard.css';
   } 
 
 </style>
+
+
+<script>
+  const colors = ['purple', 'red', 'green','orange'];
+  const words = ['Airlift', 'Your','Tech', 'Products'];
+  const heading = document.getElementById("headingChange");
+  const span1 = document.getElementById("span1");
+  const span2 = document.getElementById("span2");
+  let currentColorIndex = 0;
+  let currentWordIndex = 0;
+  // span1.style.color = 'red'
+
+  const getRandomColor = function(){
+    currentColorIndex = (currentColorIndex + 1) % colors.length;
+    currentWordIndex = (currentWordIndex + 1) % words.length;
+    // span1.style.color = colors[currentColorIndex];
+    // span2.style.color = colors[currentColorIndex + 1];
+    heading.innerHTML = words.map((word,index) => {
+      if(index == currentWordIndex){
+        return `<span style="color: ${colors[currentColorIndex]}">${word}</span>`;
+      }
+      return `<span>${word}</span>`;
+    }).join(' ');  
+
+  }
+
+  setInterval(getRandomColor,4000);
+
+</script>

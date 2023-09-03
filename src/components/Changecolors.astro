@@ -1,0 +1,48 @@
+<div class="flex" id="words">
+  <h1 class="text">Airlift</h1>
+  <h1 class="text">Your</h1>
+  <h1 class="text">Tech</h1>
+  <h1 class="text">Products</h1>
+</div>
+
+<script>
+  const words = document.querySelectorAll('.text');
+  const totalWords = words.length;
+  let currentColorIndex = 0;
+
+  function changeColor() {
+    words[currentColorIndex].classList.remove('bg-gradient-from-blue');
+    words[currentColorIndex].classList.add('bg-gradient-from-gray');
+    currentColorIndex = (currentColorIndex + 1) % totalWords;
+    words[currentColorIndex].classList.remove('bg-gradient-from-gray');
+    words[currentColorIndex].classList.add('bg-gradient-from-blue');
+  }
+
+  setInterval(changeColor, 3000);
+</script>
+
+<style>
+  .text {
+    font-size: 4rem;
+    margin: 0.5rem;
+    font-weight: bold;
+    display: inline-block;
+    font-family: serif;
+    background-clip: text;
+    transition: background-color 2s;
+  }
+
+
+  .bg-gradient-from-blue {
+      background-image: linear-gradient(to right, #3498db, #2ecc71);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .bg-gradient-from-gray {
+      background-image: linear-gradient(to right, #555555, #333333);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+</style>

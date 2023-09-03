@@ -1,0 +1,45 @@
+<div class="main-bg pt-12 mt-4 pb-12  py-0 flex flex-col md:flex-row justify-start md:justify-center items-center">
+    <div class="w-100 md:w-50 px-4 flex flex-col justify-between items-start flex-grow-1">
+        <smal class="text-white">community</smal>
+        <h1 class="text-2xl md:text-4xl lg:text-6xl text-white px-6 py-12">Join our community</h1>
+        <h6 class="text-md md:text-lg lg:text-xl text-white px-6 ">Get support, get involved and our community of 100+ Godspeed developers-- it all happens on Discord.</h6>
+        <button class="px-6 py-3 mt-6 mb-4  text-gray-500 bg-white custom-btn-community">Join our Discord</button>
+    </div>
+    <img class="custom-container-image-bg" 
+    src="https://ik.imagekit.io/pavanKillada/community-cloud?updatedAt=1692716248411" alt="community cloud"/>
+    
+</div>
+    <!-- src="https://res.cloudinary.com/dfuwiecz0/image/upload/v1692707421/Godspeed/Community-1_zdoto3.png"  -->
+
+
+<style>
+    .main-bg{
+        background: linear-gradient(to right, #3490dc, #800080);
+    }
+    .custom-btn-community{
+        border-radius: 50px;
+        color: gray;
+        font-weight: bold;
+    }
+    .custom-container-image-bg{
+        background-color: transparent;
+        display: none;
+        /* width: 150%; */
+        /* object-fit: cover; */
+        clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+       /* align-self: flex-end; */
+       /* position: absolute; */
+        top: 0;
+        left: 50%;
+        transform: translate(0,40%);
+        /* transform: translateY(50%); */
+    }
+
+  @media (min-width: 1025px) {
+    .custom-container-image-bg{
+        display: inline;
+        width: 40%;
+    }
+  } 
+
+</style>
