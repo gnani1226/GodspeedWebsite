@@ -1,0 +1,87 @@
+---
+import HeroheadChange from './Headcolortoggle';
+import './Reactcard.css';
+
+---
+
+<section class="pb-12 flex flex-col justify-center items-center custom-section">
+  <HeroheadChange client:load/>
+
+  <div
+
+    class="flex flex-col gap-x-6 mt-6 gap-y-8 px-4 md:px-6 md:mt-10  lg:justify-between lg:items-center lg:mt-20"
+  >
+    <p
+      class="body pt-12 mt-12 lg:pt-0 px-8 text-astro-gray-200  lg:px-0 lg:text-center xl:text-lg"
+    >
+      Used by top teams in tech:
+    </p>
+    <div class="flex flex-row flex-wrap items-center justify-center gap-2">
+      <img
+        src="https://res.cloudinary.com/dfuwiecz0/image/upload/v1692626920/Godspeed/ALM_19-A_LogoINT_4c_niey56.png"
+        alt="pine labs"
+      
+        class="custom-img-client"
+      />
+      <img
+        src="https://res.cloudinary.com/dfuwiecz0/image/upload/v1692776461/Godspeed/Client%20Logos/moneytor_kkxsy8.png"
+        alt="pine labs"
+        class="custom-img-client"
+      />
+      <img
+        src="https://res.cloudinary.com/dfuwiecz0/image/upload/v1692776461/Godspeed/Client%20Logos/pinelabs_sr8vbh.png"
+        alt="pine labs"
+        class="custom-img-client"
+      />
+      <img
+        src="https://res.cloudinary.com/dfuwiecz0/image/upload/v1692776460/Godspeed/Client%20Logos/kunbah_ez9bej.png"
+        alt="pine labs"
+      
+        class="custom-img-client"
+      />
+      <img
+        src="https://res.cloudinary.com/dfuwiecz0/image/upload/v1692776460/Godspeed/Client%20Logos/card91_tbgeio.png"
+        alt="pine labs"
+       
+        class="custom-img-client"
+      />
+      <img
+        src="https://res.cloudinary.com/dfuwiecz0/image/upload/v1692776089/Godspeed/Client%20Logos/lighthouse_hs7tv1.png"
+        alt="pine labs"
+    
+        class="custom-img-client"
+      />
+
+    </div>
+  </div>
+</section>
+
+<style>
+
+  .custom-sec-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+
+  }
+
+  .custom-section {
+    width: 70%;
+    padding-top: 100px;
+    margin-top: 30px;
+
+  }
+  .custom-img-client{
+    width: 120px;
+  }
+  @media (min-width: 768px) {
+    .custom-img-client{
+      flex-direction: row;
+      width: 160px;
+    }
+  } 
+
+</style>
