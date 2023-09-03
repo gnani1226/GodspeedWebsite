@@ -9,14 +9,9 @@ import Companymnclogos from '../components/Companymnclogos.astro';
 <Layout title="Welcome to Godspeed.">
 	<div class="pb-20 custom-sec-div">
 		<Herosection />
-	  </div>
-	  <div class="min-h-screen flex flex-col justify-center items-center lg:pt-8">
-		<Developerbusinessbtns />
-		<h1 class="text-6xl text-black">Gnaneshwar</h1>
 		<Companymnclogos />
-		<p class="text-6xl text-black">Hi </p>
-	  </div>
-	  <Companymnclogos />
+	</div>
+	  
 </Layout>
 
 <style>
@@ -79,6 +74,7 @@ import Companymnclogos from '../components/Companymnclogos.astro';
 	.custom-sec-div {
 			width: 100%;
 			display: flex;
+			min-height: 100vh;
 			flex-direction: column;
 			justify-content: flex-start;
 			align-items: center;
