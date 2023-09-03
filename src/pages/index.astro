@@ -1,11 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Herosection from '../components/Herosection.astro';
+import Developerbusinessbtns from '../components/Developerbusinessbtns.astro';
 ---
 
 <Layout title="Welcome to Godspeed.">
 	<div class="pb-20 custom-sec-div">
 		<Herosection />
+	  </div>
+	  <div class="min-h-screen flex flex-col justify-center items-center lg:pt-8">
+		<Developerbusinessbtns />
 	  </div>
 </Layout>
 
@@ -74,5 +78,5 @@ import Herosection from '../components/Herosection.astro';
 			align-items: center;
 			text-align: center;			
 	}
-	
+
 </style>

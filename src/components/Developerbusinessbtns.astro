@@ -1,0 +1,58 @@
+---
+import Card from "./Card.astro";
+---
+
+<div class="flex flex-col justify-center items-center w-50  pb-12">
+    <h1 class="text-center text-4xl md:text-6xl pt-6 pb-4 font-bold">
+      Customised for your your specific use cases
+    </h1>
+    <p class="text-l text-center pb-6 leading-10">
+      Build, deploy, scale and monitor your tech products like Full Stack
+      apps, plug and play micro-services, SaaS products, business tools, event
+      driven systems and much more. Godspeed offers solutions for teams of all
+      sizes. Let’s get started!
+    </p>
+    <ul role="list" class="flex flex-col md:flex-row justify-center items-center gap-4 mt-6">
+        <!-- <a class="developer-btn"><span>Developer</span></a> -->
+      <div class="hover-up">
+        <button class="text-white font-bold icons">Developer</button>
+      </div>
+      <div class="hover-up">
+        <button class="text-white font-bold">Business</button>
+      </div>
+    </ul>
+  </div>
+
+  <style>
+
+    /* a{
+        background: linear-gradient(45deg,#0ce39a,#69007f,#fc0987);
+        color: white;
+        padding:10px 20px 10px 20px;
+        border-radius: 10px;
+    }
+    a:hover::before{
+        content: '';
+        inset: 1px;
+        background: #272727;
+        border-radius: 9px;
+        transition: 0.5s;
+    } */
+
+    .hover-up {
+      background: linear-gradient(to right, #b50ed8,#6c18e8);
+      padding: 10px 30px 10px 30px;
+      border-radius: 50px;
+      display: inline-block;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      transition: transform 0.2s ease-in-out; /* Add a transition for smooth movement */
+    }
+
+    .hover-up:hover {
+    transform: translateY(-10px); /* Move the element 5 pixels upward on hover */
+    }
+
+
+
+  </style>
