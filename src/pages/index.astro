@@ -1,94 +1,63 @@
 ---
+const title = 'Godspeed';
 import Layout from '../layouts/Layout.astro';
+import GodspeedSuite from '../components/GodspeedSuite.jsx';
+import Cards3 from '../components/Cards3.astro';
+import Community from '../components/Community.astro';
+import Companymnclogos from '../components/Companymnclogos.astro';
 import Herosection from '../components/Herosection.astro';
 import Developerbusinessbtns from '../components/Developerbusinessbtns.astro';
-import Companymnclogos from '../components/Companymnclogos.astro';
-import Footer from '../components/Footer.astro';
 ---
 
+<!-- bg-gradient-to-r from-[rgba(2,4,5,255)] to-[rgba(3,5,6,255)] via-[rgba(28,8,45,255)] via-[rgba(29,9,46,255)] via-[rgba(29,9,46,255)] -->
 <Layout title="Welcome to Godspeed.">
-	<div class="pb-20 custom-sec-div scrolling">
-		<Herosection />
-		
-	</div>
-	<div class="min-h-screen scrolling">
-		<Companymnclogos/>
-	</div>
-
-	<!-- <div  class="min-h-screen">
-		<Footer/>
-	</div> -->
-	  
+  <div class="pb-20 custom-sec-div">
+    <Herosection />
+  </div>
+  <div class="min-h-screen flex flex-col justify-center items-center lg:pt-8">
+    <!-- bg-[rgba(46,37,61,255)] -->
+    <!-- GodspeedFeatures component has features with % as they progress -->
+    <!-- <GodspeedFeatures /> -->
+    <Developerbusinessbtns />
+    <div class="mt-10 pt-10 pb-8 flex flex-col justify-center items-center">
+      <h1 class="text-4xl text-center lg:text-6xl pb-8 font-bold">Godspeed Suite</h1>
+      <div class="custom-focused-div">
+        <GodspeedSuite client:load />
+      </div>
+    </div>
+    <div class="mb-8 custom-section-3">
+      <Cards3 />
+      <Community />
+    </div>
+  </div>
+  <Companymnclogos />
+ 
+  <hr class="border-astro-gray-500 astro-OUAMJN2I" />
 </Layout>
-
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
-	.custom-sec-div {
-			width: 100%;
-			display: flex;
-			min-height: 100vh;
-			flex-direction: column;
-			justify-content: flex-start;
-			align-items: center;
-			text-align: center;			
-	}
-	.scrolling{
-		overflow-y: auto;
-	}
 
+  .custom-section-3 {
+    width: 70%;
+  }
+
+  .custom-sec-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+   /* background: linear-gradient(45deg,#ffffff,#ffffff,#9eecec,#ffffff,#ffffff) */
+
+    /* background-color: #ffffff; */
+    
+
+  }
+  /* background: radial-gradient(ellipse farthest-corner at center, rgba(28,8,65,255),rgba(2,4,5,255)); */
+   
+  .custom-focused-div {
+    width: 50%;
+    /* background-color: #23262d; */
+    padding: 10px;
+  }
 </style>

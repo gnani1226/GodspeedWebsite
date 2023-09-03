@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+import UserformData from "../components/UserformData.jsx";
+import Fieldtesting from "../components/Fieldtesting";
+---
+
+<Layout title="Contact Us!">
+    <div class="contact-section-div">
+        <!-- <Fieldtesting client:load /> -->
+        <UserformData client:load />
+    </div>
+</Layout>
+
+
+<style>
+    .contact-section-div{
+        padding-top: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+</style>

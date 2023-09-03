@@ -4,75 +4,75 @@
 } */
 
 .test {
-    color: red;
+  color: red;
+}
+/* .nav-custom-bg{
+  /* background-color: #202038; */
+  /* background-color: #ffffff; */
+
+
+/* } */
+
+.nav-custom-bg {
+  /* pointer-events: none;  */
+  backdrop-filter: blur(40px); 
+  z-index: 100; 
+  /* opacity: 100; */
+  /* transition: opacity 0.3s ease-in-out; */
+}
+
+
+/* src/App.css */
+.border-container {
+  width: 200px;
+  height: 200px;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Apply border to left side */
+.border-container.border-left-2 {
+  border-left-color: #ff5733;
+}
+
+/* Apply border to right side */
+.border-container.border-right-2 {
+  border-right-color: #ff5733;
+}
+
+
+.form-div{
+  /* width: 50%; */
+  background-image: linear-gradient(45deg, #e30cbc,#f26209);
+  border-radius: 20px;
+  padding: 2px;
+  max-width: 400px;
+  
+}
+
+.form-class{
+  background-color: #ffffff;
+  border-radius: 18px;
+  
+  /* width: 50%; */
+  /* border: 2px solid; */
+  /* border-color: linear-gradient(45deg,#e30cbc, #f26209); */
+}
+.text-main-div{
+  max-width: 400px;
+}
+
+/* @media (min-width: 768px){
+  .form-main-div{
+    width: 100%
   }
-  /* .nav-custom-bg{
-    /* background-color: #202038; */
-    /* background-color: #ffffff; */
-  
-  
-  /* } */
-  
-  .nav-custom-bg {
-    /* pointer-events: none;  */
-    backdrop-filter: blur(40px); 
-    z-index: 100; 
-    /* opacity: 100; */
-    /* transition: opacity 0.3s ease-in-out; */
-  }
-  
-  
-  /* src/App.css */
-  .border-container {
-    width: 200px;
-    height: 200px;
-    border: 2px solid transparent;
-    transition: border-color 0.3s ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  /* Apply border to left side */
-  .border-container.border-left-2 {
-    border-left-color: #ff5733;
-  }
-  
-  /* Apply border to right side */
-  .border-container.border-right-2 {
-    border-right-color: #ff5733;
-  }
-  
-  
   .form-div{
-    /* width: 50%; */
-    background-image: linear-gradient(45deg, #e30cbc,#f26209);
-    border-radius: 20px;
-    padding: 2px;
-    max-width: 400px;
-    
+    width: 100%
   }
   
-  .form-class{
-    background-color: #ffffff;
-    border-radius: 18px;
-    
-    /* width: 50%; */
-    /* border: 2px solid; */
-    /* border-color: linear-gradient(45deg,#e30cbc, #f26209); */
-  }
-  .text-main-div{
-    max-width: 400px;
-  }
-  
-  /* @media (min-width: 768px){
-    .form-main-div{
-      width: 100%
-    }
-    .form-div{
-      width: 100%
-    }
-    
-  } */
+} */

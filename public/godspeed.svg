@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 128 128">
+    <path url="https://static.wixstatic.com/media/0aab3c_8d3296710aad415f89b9cc41007e40d6~mv2.png/v1/fill/w_257,h_470,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_20230207_113844-removebg-preview.png" />
+    <style>
+        path { fill: #000; }
+        @media (prefers-color-scheme: dark) {
+            path { fill: #FFF; }
+        }
+    </style>
+</svg>
