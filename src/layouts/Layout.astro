@@ -25,7 +25,7 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="bodyclass min-h-screen overflow-y-auto">
+  <body class="bodyclass min-h-screen scolling">
     <Navcustom client:load />
     <!-- <Testnavbar client:load /> -->
 	<!-- overflow-y-auto -->
@@ -56,6 +56,9 @@ const { title } = Astro.props;
   }
   .bodyclass{
     overflow: hidden;
+  }
+  .scolling{
+	overflow-y: auto;
   }
 </style>
 

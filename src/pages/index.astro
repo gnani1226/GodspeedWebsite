@@ -7,11 +7,11 @@ import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="Welcome to Godspeed.">
-	<div class="pb-20 custom-sec-div overflow-y-auto">
+	<div class="pb-20 custom-sec-div scrolling">
 		<Herosection />
 		
 	</div>
-	<div class="min-h-screen overflow-y-auto">
+	<div class="min-h-screen scrolling">
 		<Companymnclogos/>
 	</div>
 
@@ -86,6 +86,9 @@ import Footer from '../components/Footer.astro';
 			justify-content: flex-start;
 			align-items: center;
 			text-align: center;			
+	}
+	.scrolling{
+		overflow-y: auto;
 	}
 
 </style>
