@@ -57,7 +57,7 @@ const HeroheadChange = () => {
       {words.map((word, index) => (
         <h1
           key={index}
-          className={`text-4xl md:text-8xl mx-2 mb-4 font-bold transition-colors duration-2000 font-serif ${
+          className={`text-2xl md:text-8xl mx-2 mb-4 font-bold transition-colors duration-2000 font-serif ${
             index === currentColorIndex ? word.colorClass : word.defaultColor
           }`}
         >
@@ -65,7 +65,7 @@ const HeroheadChange = () => {
         </h1>
       ))}
       </div>
-      <h6 className="mt-4 text-2xl mb-8 leading-10">
+      <h6 className="mt-4 text-xl md:text-2xl mb-8 leading-10">
         Godspeed is a tech suite of tools, standards, integrations,
         abstractions, teachings and best practices, all intricately weaved
         together with behind the scenes magic.
