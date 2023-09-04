@@ -1,56 +1,25 @@
 ---
 const title = 'Godspeed';
 import Layout from '../layouts/Layout.astro';
-import GodspeedSuite from '../components/GodspeedSuite.astro';
-import Cards3 from '../components/Cards3.astro';
-import Community from '../components/Community.astro';
-import Companymnclogos from '../components/Companymnclogos.astro';
-import Herosection from '../components/Herosection.astro';
-import Developerbusinessbtns from '../components/Developerbusinessbtns.astro';
+import Section1 from '../components/Section1.astro';
+import Universe from '../components/Universe.astro';
+import Integrations from '../components/Integrations.astro';
+import SuccessStories from '../components/SuccessStories';
+import Testsuccess from '../components/Testsuccess.astro'
+import Buildoperate from '../components/Buildoperate.astro';
+
 ---
 
-<!-- bg-gradient-to-r from-[rgba(2,4,5,255)] to-[rgba(3,5,6,255)] via-[rgba(28,8,45,255)] via-[rgba(29,9,46,255)] via-[rgba(29,9,46,255)] -->
 <Layout title="Welcome to Godspeed.">
-	<div class="pb-20 custom-sec-div">
-		<Herosection />
-	  </div>
-	<div class="min-h-screen flex flex-col justify-center items-center lg:pt-8">
-		<Developerbusinessbtns />
-		<div class="mb-8 custom-section-3">
-			<Cards3 />
-			<Community />
-		</div>
-	</div>
-	
-  
+	<Section1 />
+	<Buildoperate />
+	<Integrations />
+	<Testsuccess />
+	<!-- <SuccessStories client:load /> -->
+	<Universe />
 
- 
 </Layout>
 <style>
 
-  .custom-section-3 {
-    width: 70%;
-	
-  }
 
-  .custom-sec-div {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
-   /* background: linear-gradient(45deg,#ffffff,#ffffff,#9eecec,#ffffff,#ffffff) */
-
-    /* background-color: #ffffff; */
-    
-
-  }
-  /* background: radial-gradient(ellipse farthest-corner at center, rgba(28,8,65,255),rgba(2,4,5,255)); */
-   
-  .custom-focused-div {
-    width: 50%;
-    /* background-color: #23262d; */
-    padding: 10px;
-  }
 </style>
