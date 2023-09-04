@@ -27,13 +27,13 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="bodyclass min-h-screen scrolling">
-    <NavigationDesign />
+  <body class="bodyclass scrolling">
+    <!-- <NavigationDesign /> -->
     <!-- <Navcustom client:load /> -->
     <!-- <Testnavbar client:load /> -->
     <slot />
     <!-- <Footer /> -->
-    <FooterDesign />
+    <!-- <FooterDesign /> -->
   </body>
 </html>
 <style is:global>
@@ -59,7 +59,8 @@ const { title } = Astro.props;
   } */
   .bodyclass{
     overflow: hidden;
-    background-color: black;
+    min-height: 100vh;
+    
   }
 
   .scrolling{

@@ -1,4 +1,4 @@
-<section class="main-section">
+<div class="main-section">
     <div class="section1-class gap-4">
      <div>
         <p class="achieve-class">ACHIEVE</p>
@@ -10,27 +10,18 @@
         <h2 class="develop-h2">Develop, Deploy & Monitor with Godspeed</h2>
         <p class="nextpara">The next-gen application command center that integrates with your development stack.</p>
     </div>
-    <div class="buttons-div">        
-        <div class="input-div">
-            <input type="text" name="email" value="Enter your email to get early access" class="input-class" />
-        </div>
+        <input type="text" name="email" placeholder="Enter your email to get early access" class="input-class" />
+    
         <div class="all-btns">
             <div class="btn-div">
                 <button class="btn">GET EARLY ACCESS</button>
             </div>
-                <div class="empty-div">hh</div>
-                <div class="empty-div">hh</div>
+                <div class="empty-div"></div>
+                <div class="empty-div"></div>
         </div>
     </div>
-    </div>
-    <!-- <div class="section2-div">
-        <h1 class="bg-transparent">Gnaneshwar</h1>
-    </div>   -->
-         
-</section>
+</div>
 
-<!-- hsl(33, 100%, 50%) -->
-<!-- rgba(199,58,0, 1) -->
 <style>
 
     .main-section{
@@ -44,6 +35,16 @@
         padding-left: 50px;
 
         }
+
+        @media (max-width:768px){
+            .main-section{
+                padding: 30px;
+                min-height:80vh
+        
+                
+            }
+        }
+
     .all-btns{
         width: 460px;
         display: flex;
@@ -51,6 +52,7 @@
         align-items: center;
 
     }
+    
 
     .empty-div{
         box-shadow: 0px 16px 28px -20px ragb(199,58,0, 1);
@@ -60,7 +62,6 @@
         color: rgba(255,140,0, 1);
         margin-top: 20px;
         margin-left: 10px;
-        /* box-shadow: 16px 0px 28px 10px #C73A00; */
         width: 20px;
         
         
@@ -80,14 +81,19 @@
 
     }
 
+    @media (max-width:768px){
+        .spanclass{
+            font-size: 22px;
+        }
+    }
 
     .spanclass {
         display: inline;
-        overflow: hidden; /* Ensures the content is not revealed until the animation */
-        border-right: .15em solid orange; /* The typwriter cursor */
-        white-space: nowrap; /* Keeps the content on a single line */
-        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-        letter-spacing: .15em; /* Adjust as needed */
+        overflow: hidden; 
+        border-right: .15em solid orange; 
+        white-space: nowrap; 
+        margin: 0 auto; 
+        letter-spacing: .15em; 
         animation: 
             typing 3.5s steps(30, end),
             blink-caret .5s step-end infinite;
@@ -112,20 +118,20 @@
         flex-direction: column;
         justify-content: center;    
         align-items: flex-start;
-        padding-left: 50px;
+        padding-left: 50px
     }
-
-    .section2-div{
-        width: 30%;
-        background: radial-gradient(circle at bottom right,rgba(199,58,0, 1),rgba(255,140,0, 1))
+    @media (max-width:768px) {
+        .section1-class{
+            width:100%;
+            padding-left: 0px;
+            /* background-color:red */
+        }
         
-
     }
 
     .achieve-class{ 
     opacity: 1;
     color: rgba(122,122,122,1);
-    /* font-family: "DMSans-9ptRegular_Medium"; */
     font-family: sans-serif;
     font-size: 24px;
     font-weight: 500;
@@ -138,7 +144,6 @@
     .quantum{
         opacity: 1;
         color: rgba(255,255,255,1);
-        /* font-family: "DMSans-9ptRegular_ExtraBold"; */
         font-family: sans-serif;
         font-size: 40px;
         font-weight: 800;
@@ -147,10 +152,24 @@
         text-align: left;
         display: inline;
     }
+    @media (max-width:768px){
+        .achieve-class{
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .quantum{
+            font-size: 22px;
+            margin-bottom: 10px;
+
+        }
+        .develop-h2{
+            margin-bottom: 15px;
+
+        }
+    }
 .develop-h2{
     opacity: 1;
     color: rgba(204,204,204,1);
-    /* font-family: "DMSans-9ptRegular_Bold"; */
     font-family: sans-serif;
     font-size: 32px;
     font-weight: 700;
@@ -162,7 +181,6 @@
 .nextpara{
     opacity: 1;
     color: rgba(143,143,143,1);
-    /* font-family: "DMSans-9ptRegular_Regular"; */
     font-family: sans-serif;
     font-size: 24px;
     font-weight: 400;
@@ -173,10 +191,20 @@
 
 }
 
+@media (max-width:768px){
+    .develop-h2{
+        font-size: 18px;
+        /* flex-wrap: wrap; */
+    }
+    .nextpara{
+        font-size: 15px;
+        line-height: 20px;
+    }
+}
+
 .btn{
         opacity: 1;
     color: rgba(0,0,0,1);
-    /* font-family: "DMSans-9ptRegular_Black"; */
     font-family: sans-serif;
     font-size: 28px;
     font-weight: 900;
@@ -196,7 +224,7 @@
     align-items: center;
     }
 
-    .input-div{
+    /* .input-div{
         border-radius: 2px;
         border: 1px solid rgba(255,255,255, 0.14);
         opacity: 1;
@@ -205,12 +233,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-    }
+    } */
 
     .input-class{
-        opacity: 1;
+        /* opacity: 1;
         color: rgba(173,173,173,1);
-        /* font-family: "DMSans-9ptRegular_Medium"; */
         font-family: sans-serif;
         font-size: 24px;
         font-weight: 500;
@@ -219,9 +246,48 @@
         text-align: left;
         line-height: 32px;
         width: 420px;
-        background-color: transparent;
+        background-color: transparent; */
+
+    height: 88px;
+    width: 460px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 24px;
+    border-style: solid;
+    border-color: beige;
+    border-radius: 2px;
+    border-width: 1px;
+    background-color: transparent;
+    font-family: sans-serif;
+    margin-right: 20px;
+    color: #BDD4DE;
+    margin-top: 60px;
  
     }
 
+    @media (max-width:768px){
+
+        .all-btns{
+            width: 280px;
+        }
+        .input-class{
+            width: 280px;
+            /* width: 80; */
+            margin-right:0px ;
+            height: 45px;
+            font-size: 15px;
+        }
+        .btn-div{
+            width: 220px;
+            height: 45px;
+        }
+        .btn{
+            font-size: 15px;
+        }
+        .empty-div{
+            height: 45px;
+            width: 18px;
+        }
+    }
 
 </style>
