@@ -1,39 +1,28 @@
-<body>
-    <div class="success-container">
-         <div class="successful-logo">
-        <div class="logo">
-            <div class="small-yellow-light">
-            </div>
-            <div class="small-orange-light">
-            </div>
-            <div class="small-yellow">
-            </div>
-            <div class="small-orange">
-            </div>
-            <div class="yellow">
-            </div>
-            <div class="orange">
-            </div>
-        </div>
-        <h1 class="successs-heading">SUCCESS STORIES</h1>
-
+<div class="success-container">
+        <div class="successful-logo">
+            <div class="logo">
+                <div class="yellow"></div>
+                <div class="orange"></div>
+                <div class="light-orange"></div>
+            </div> 
+            <h1 class="head-integrate">SUCCESS STORIES</h1>
         </div>
    
     <div class="container1 gap-4">
         <div class="left-panel">
             <h1 id="headingh1" class="heading1">SEE HOW PINELABS ACHIEVED 60% PRODUCTIVUTY</h1>
             <h2 id="headingh2" class="heading2">Godspeed brought us significant productivity gain in developing, observing observing and maintaining mission critical services, with quality and standards</h2>
-            <div class="flex justify-start items-center gap-3">
+            <div class="btns-div-class flex justify-start items-center gap-3">
 
                 <button class="video-button" data-video-id="in64WNtUwBE?si=3914uYwnDqkUjm6X">
                     <img class="client-image" 
                     src="https://res.cloudinary.com/dfuwiecz0/image/upload/v1693840308/Godspeed/Designlogos/2_nyeweb.png" />
                 </button>   
-            <button class="video-button" data-video-id="0n7AWxYCj9I?si=v9OpYJb3FZoFNELG">
+            <button class="video-button" data-video-id="">
                 <img class="client-image" 
                 src="https://res.cloudinary.com/dfuwiecz0/image/upload/v1693836023/Godspeed/Designlogos/3_e0zfc8.png" />
             </button>
-            <button class="video-button" data-video-id="0n7AWxYCj9I?si=v9OpYJb3FZoFNELG">
+            <button class="video-button" data-video-id="">
                 <img class="client-image" 
                 src="https://res.cloudinary.com/dfuwiecz0/image/upload/v1693840331/Godspeed/Designlogos/Bitmap_rd159s.png" />
             </button>
@@ -43,27 +32,26 @@
         </div>
         <div class="right-panel">
            
-            <iframe id="video-frame" src="https://www.youtube.com/embed/in64WNtUwBE?si=3914uYnwDqkUjm6X" frameborder="0" allowfullscreen></iframe>
+            <iframe  class="video-class"
+             id="video-frame" src="https://www.youtube.com/embed/in64WNtUwBE?si=3914uYnwDqkUjm6X" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
 </div>
-</body>
+
 
 <style>
-    body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
 
 .success-container{
     padding: 100px;
+    background-color: black;
 
 }
 
+
+
 .client-image{
-    width: 200px;
-    height: 60px;
+    /* width: 200px;
+    height: 60px; */
 }
 
 .successful-logo{
@@ -78,7 +66,7 @@
 .successs-heading{
     opacity: 1;
 color: rgba(255,255,255,1);
-font-family: "DMSans-9ptRegular_ExtraBold";
+font-family: sans-serif;
 font-size: 60px;
 font-weight: 800;
 font-style: normal;
@@ -87,6 +75,33 @@ text-align: left;
 line-height: 80px;
 text-transform: uppercase;
 }
+
+.head-integrate{
+    opacity: 1;
+        color: rgba(255,255,255,1);
+        font-family: sans-serif;
+        font-size: 60px;
+        font-weight: 800;
+        font-style: normal;
+        letter-spacing: 4px;
+        text-align: right;
+        line-height: 80px;
+        text-transform: uppercase;
+        padding-right: 50px;
+    }
+
+    @media (max-width:768px){
+    .head-integrate{
+        font-size: 25px;
+        letter-spacing: 1px;
+        line-height:10px;
+        margin-top:10px;
+        white-space: nowrap;
+        margin-bottom: 50px;
+        
+    }
+}
+
 .container1 {
     display: flex;
     justify-content: flex-start;
@@ -101,23 +116,23 @@ text-transform: uppercase;
 
 .heading1{
     opacity: 1;
-color: rgba(204,204,204,1);
-font-family: "DMSans-9ptRegular_Bold";
-font-size: 32px;
-font-weight: 700;
-font-style: normal;
-letter-spacing: 2.29px;
-text-align: left;
-line-height: 44px;
-text-transform: uppercase;
-padding-bottom: 50px;
-max-width: 80%;
+    color: rgba(204,204,204,1);
+    font-family: sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 2.29px;
+    text-align: left;
+    line-height: 44px;
+    text-transform: uppercase;
+    padding-bottom: 50px;
+    max-width: 80%;
 
 }
 .heading2{
     opacity: 1;
 color: rgba(143,143,143,1);
-font-family: "DMSans-9ptRegular_Regular";
+font-family: sans-serif;
 font-size: 24px;
 font-weight: 400;
 font-style: normal;
@@ -139,7 +154,7 @@ h2 {
 
 .video-button {
     display: block;
-    width: 150px;
+    /* width: 150px; */
     padding: 10px;
     background-color: transparent;
     border: none;
@@ -162,96 +177,89 @@ h2 {
     width: 800px;
 }
 
+
+
 iframe {
     width: 100%;
     height: 100%;
     border: none;
 }
-
+  
 .yellow {
-    height: 15px;
-    width: 120px;
     background-color: #FF8C00;
-    /* overflow: visible; */
-    position: relative;
-    z-index: 2;
-    top: 30px;
-  }
+    display: inline;
+    width: 160px;
+    height: 12px;
+}
 
-  .orange {
-    height: 80px;
-    width: 80px;
+.orange {
     background-color: orangered;
-    opacity: 70%;
-    position: relative;
-    z-index: 1;
-    margin-left: -30px;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 1);
-  }
-
-.small-orange {
-    height: 50px;
-    width: 70px;
-    background-color: orangered;
+    display: inline;
+    width: 30px;
+    height: 12px;
     opacity: 50%;
-    position: relative;
-    z-index: 3;
-    top: 18px;
-    margin-right: -20px;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 1);
 }
 
-.small-yellow {
-    height: 15px;
-    width: 25px;
-    background-color: #FF8C00;
-    overflow: visible;
-    position: relative;
-    z-index: 4;
-    top: 30px;
-    margin-right: -25px;
-    opacity: 60%;
-}
-
-.small-orange-light {
-    height: 50px;
-    width: 60px;
+.light-orange {
     background-color: orangered;
-    opacity: 20%;
-    position: relative;
-    z-index: 5;
-    top: 18px;
-    margin-right: -15px;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 1);
-}
-
-.small-yellow-light {
-    height: 15px;
-    width: 25px;
-    background-color: #FF8C00;
-    overflow: visible;
-    position: relative;
-    z-index: 6;
-    top: 30px;
-    margin-right: -25px;
+    display: inline;
+    width: 30px;
+    height: 12px;
     opacity: 20%;
 }
-
-  .logo {
-    background-color: transparent;
-    position: relative;
-    justify-content: center;
+.logo {
     display: flex;
-    margin-right: 30px;
-    top:30px;
-    transform: scaleX(-1);
-    
-  }
+    gap: 15px;
+    margin-right: 50px;
+}
 
+@media (max-width:768px){
+    .success-container{
+        min-height: 100vh;
+        padding: 30px;
+    }
+    .client-image{
+        width: 50px;
+    }
+    .btns-div-class{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .container1{
+        flex-direction: column;
+    }
+    .left-panel{
+        order:2;
+        /* padding-left: 60px; */
+    }
+    .right-panel{
+        order: 1;
+        width: 100%;
+        background-color: white
+    }
+    .heading1{
+        font-size: 22px;
+        letter-spacing: 1px;
+        line-height: 30px;
+    }
+    .heading2{
+        font-size: 18px;
+        letter-spacing: 1px;
+        line-height: 25px;
+    }
+    .video-button {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+ 
+}
 
 </style>
 
-<script>
+<!-- <script>
   const videoFrame = document.getElementById('video-frame');
 const videoButtons = document.querySelectorAll('.video-button');
 // const h1Element = document.querySelector('h1');
@@ -288,5 +296,5 @@ videoButtons.forEach(button => {
 });
 
 
-</script>
+</script> -->
 
