@@ -32,38 +32,6 @@ function ScrollApp() {
     "https://res.cloudinary.com/digrwsp4s/image/upload/v1692743627/download_15_xm1ocb.png",
   ];
 
-  // const row1 = [
-  //   "https://res.cloudinary.com/digrwsp4s/image/upload/v1692707569/graphql_ppe7vt.png",
-  //   // "https://res.cloudinary.com/dfuwiecz0/image/upload/v1692719024/Godspeed/Tech%20logos/redisnet_hfzmtw.webp",
-  //   // "https://res.cloudinary.com/dfuwiecz0/image/upload/v1692719205/Godspeed/Tech%20logos/swaggernet_efczjq.png",
-  //   "https://res.cloudinary.com/digrwsp4s/image/upload/v1692707570/passport_assbnc.png",
-  //   "https://res.cloudinary.com/digrwsp4s/image/upload/v1692707570/vue_pbl3m9.jpg",
-  //   "https://res.cloudinary.com/digrwsp4s/image/upload/v1692707570/tailwind_zurwyp.png",
-  //   "https://res.cloudinary.com/digrwsp4s/image/upload/v1692707570/react_g4ioxv.png",
-  //   "https://res.cloudinary.com/digrwsp4s/image/upload/v1692707570/prisma_fnmbzb.png",
-  //   "https://res.cloudinary.com/digrwsp4s/image/upload/v1692707569/eslint_t88b01.png",
-  //   "https://res.cloudinary.com/digrwsp4s/image/upload/v1692707569/graphql_ppe7vt.png",
-  //   "https://res.cloudinary.com/digrwsp4s/image/upload/v1692707570/passport_assbnc.png",
-  //   "https://res.cloudinary.com/digrwsp4s/image/upload/v1692707570/vue_pbl3m9.jpg",
-  //   "https://res.cloudinary.com/digrwsp4s/image/upload/v1692707570/tailwind_zurwyp.png",
-  //   "https://res.cloudinary.com/digrwsp4s/image/upload/v1692707570/react_g4ioxv.png",
-  //   "https://res.cloudinary.com/digrwsp4s/image/upload/v1692707570/prisma_fnmbzb.png",
-  //   "https://res.cloudinary.com/digrwsp4s/image/upload/v1692707569/eslint_t88b01.png",
-  //   "https://res.cloudinary.com/digrwsp4s/image/upload/v1692707569/graphql_ppe7vt.png",
-  //   "https://res.cloudinary.com/digrwsp4s/image/upload/v1692707570/passport_assbnc.png",
-  //   "https://res.cloudinary.com/digrwsp4s/image/upload/v1692707570/vue_pbl3m9.jpg",
-  //   "https://res.cloudinary.com/digrwsp4s/image/upload/v1692707570/tailwind_zurwyp.png",
-  //   "https://res.cloudinary.com/digrwsp4s/image/upload/v1692707570/react_g4ioxv.png",
-  //   "https://res.cloudinary.com/digrwsp4s/image/upload/v1692707570/prisma_fnmbzb.png",
-  //   "https://res.cloudinary.com/digrwsp4s/image/upload/v1692707569/eslint_t88b01.png",
-  //   "https://res.cloudinary.com/digrwsp4s/image/upload/v1692707569/graphql_ppe7vt.png",
-  //   "https://res.cloudinary.com/digrwsp4s/image/upload/v1692707570/passport_assbnc.png",
-  //   "https://res.cloudinary.com/digrwsp4s/image/upload/v1692707570/vue_pbl3m9.jpg",
-  //   "https://res.cloudinary.com/digrwsp4s/image/upload/v1692707570/tailwind_zurwyp.png",
-  //   "https://res.cloudinary.com/digrwsp4s/image/upload/v1692707570/react_g4ioxv.png",
-  //   "https://res.cloudinary.com/digrwsp4s/image/upload/v1692707570/prisma_fnmbzb.png",
-  //   "https://res.cloudinary.com/digrwsp4s/image/upload/v1692707569/eslint_t88b01.png",
-  // ];
 
   return (
     <div className="AppContainer">
