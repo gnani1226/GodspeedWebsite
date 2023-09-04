@@ -1,7 +1,7 @@
 ---
 const title = 'Godspeed';
 import Layout from '../layouts/Layout.astro';
-import GodspeedSuite from '../components/GodspeedSuite.jsx';
+import GodspeedSuite from '../components/GodspeedSuite.astro';
 import Cards3 from '../components/Cards3.astro';
 import Community from '../components/Community.astro';
 import Companymnclogos from '../components/Companymnclogos.astro';
@@ -19,11 +19,9 @@ import Developerbusinessbtns from '../components/Developerbusinessbtns.astro';
     <!-- GodspeedFeatures component has features with % as they progress -->
     <!-- <GodspeedFeatures /> -->
     <Developerbusinessbtns />
-	<div class="mt-10 pt-10 pb-8 flex flex-col justify-center items-center">
-		<h1 class="text-4xl text-center lg:text-6xl pb-8 font-bold">Godspeed Suite</h1>
-		<div class="custom-focused-div">
-		  <GodspeedSuite client:load />
-		</div>
+	<div class="mb-8 custom-section-3">
+		<Cards3 />
+		<Community />
 	  </div>
 	</div>
 
