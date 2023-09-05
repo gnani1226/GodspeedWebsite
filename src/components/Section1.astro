@@ -10,7 +10,6 @@ if (Astro.request.method === "POST") {
         email: name1,
     }
     axios.post('http://localhost:3003/users/create', userdata);
-    // alert("Submited successfully")
   } catch (error) {
     if (error instanceof Error) {
       console.error(error.message);
@@ -42,7 +41,6 @@ if (Astro.request.method === "POST") {
                 <div class="empty-div"></div>
         </div>
     </form>
-    <p id="parasubmitbtn" class="parasubmit">submitted successfully</p>
     </div>
 </div>
 
@@ -321,7 +319,6 @@ if (Astro.request.method === "POST") {
 
 </style>
 
-<button class="alert">Click me!</button>
 
 <script>
   // Find all buttons with the `alert` class on the page.
@@ -331,6 +328,6 @@ if (Astro.request.method === "POST") {
 
   // Handle clicks on each button.
     buttons.addEventListener('click', () => {
-        alert("Emial submitted successfully");
+        alert("Email submitted successfully");
     });
 </script>
