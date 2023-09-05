@@ -1,3 +1,24 @@
+---
+
+import axios from 'axios';
+
+if (Astro.request.method === "POST") {
+  try {
+    const data = await Astro.request.formData();
+    const name1 = data.get("email");
+    const userdata = {
+        email: name1,
+    }
+    axios.post('http://localhost:3003/users/create', userdata);
+    // alert("Submited successfully")
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
+}
+---
+
 <div class="main-section">
     <div class="section1-class gap-4">
      <div>
@@ -10,15 +31,18 @@
         <h2 class="develop-h2">Develop, Deploy & Monitor with Godspeed</h2>
         <p class="nextpara">The next-gen application command center that integrates with your development stack.</p>
     </div>
-        <input type="text" name="email" placeholder="Enter your email to get early access" class="input-class" />
+    <form method="POST">
+        <input type="text" id="inputdatavalue" name="email" placeholder="Enter your email to get early access" class="input-class" />
     
         <div class="all-btns">
             <div class="btn-div">
-                <button class="btn">GET EARLY ACCESS</button>
+                <button type="submit" id="submitbtn" class="btn alert">GET EARLY ACCESS</button>
             </div>
                 <div class="empty-div"></div>
                 <div class="empty-div"></div>
         </div>
+    </form>
+    <p id="parasubmitbtn" class="parasubmit">submitted successfully</p>
     </div>
 </div>
 
@@ -51,6 +75,11 @@
         justify-content: flex-start;
         align-items: center;
 
+    }
+    .parasubmit{
+        font-size: 18px;
+        color: white;
+        display: none;
     }
     
 
@@ -291,3 +320,17 @@
     }
 
 </style>
+
+<button class="alert">Click me!</button>
+
+<script>
+  // Find all buttons with the `alert` class on the page.
+  const buttons = document.getElementById('submitbtn');
+  const abc = document.getElementById('parasubmitbtn');
+
+
+  // Handle clicks on each button.
+    buttons.addEventListener('click', () => {
+        alert("Emial submitted successfully");
+    });
+</script>
