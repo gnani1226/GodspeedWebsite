@@ -3,7 +3,7 @@ import './Success.css'
 
 function SuccessStories() {
   const [videoId, setVideoId] = useState('https://www.youtube.com/watch?v=in64WNtUwBE'); // Default video ID
-  const [displayTexthead, setDisplayTexthead] = useState("SEE HOW PINELABS ACHIEVED 60% PRODUCTIVUTY"); // Default text
+  const [displayTexthead, setDisplayTexthead] = useState("SEE HOW PINELABS ACHIEVED +60% PRODUCTIVUTY"); // Default text
   const [displayText, setDisplayText] = useState("Godspeed brought us significant productivity \n  gain in developing, observing observing and maintaining \n mission critical services, with quality and standards"); 
 
   const handleVideoChange = (newVideoId, newText) => {
