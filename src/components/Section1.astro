@@ -9,7 +9,7 @@ if (Astro.request.method === "POST") {
     const userdata = {
         email: name1,
     }
-    // axios.post('http://localhost:3003/users/create', userdata);
+    axios.post('http://localhost:3003/users/create', userdata);
   } catch (error) {
     if (error instanceof Error) {
       console.error(error.message);
