@@ -6,6 +6,8 @@ import Navcustom from '../components/nav/Navcustom';
 import Footer from '../components/Footer.astro'
 import NavigationDesign from '../components/NavigationDesign.astro';
 import FooterDesign from '../components/FooterDesign.astro';
+// import TestFooterdesign from '../components/TestFooterdesign.astro';
+
 // import Testnavbar from '../components/Testnavbar.jsx';
 import '../styles/global.css';
 const { title } = Astro.props;
@@ -28,12 +30,13 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="bodyclass scrolling">
-    <NavigationDesign />
+    <!-- <NavigationDesign /> -->
     <!-- <Navcustom client:load /> -->
     <!-- <Testnavbar client:load /> -->
     <slot />
     <!-- <Footer /> -->
-    <FooterDesign />
+    <!-- <TestFooterdesign /> -->
+    <!-- <FooterDesign /> -->
   </body>
 </html>
 <style is:global>

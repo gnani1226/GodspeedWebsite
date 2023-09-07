@@ -1,0 +1,335 @@
+---
+import axios from 'axios';
+
+if (Astro.request.method === "POST") {
+  try {
+    const data = await Astro.request.formData();
+    const name1 = data.get("email");
+    const userdata = {
+        email: name1,
+    }
+    axios.post('http://localhost:3003/users/create', userdata);
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
+}
+---
+
+
+
+<div class="bg-black flex flex-col justify-center items-center 
+text-white text-opcity-100 pt-12 text-center w-full pl-10 pr-10 pb-12">
+   
+<h1 class="font-sans text-2xl text-center md:text-4xl lg:text-6xl pb-3
+     md:pb-4 lg:pb-6 whitespace-normal mb-8 md:mb-20">THE UNIVERSE IN THE PALM OF YOUR HANDS</h1>
+    
+     <div class="w-full flex flex-col justify-center items-center ">
+        <div class="inner-vision-container w-full">
+        
+            <h3 class="inner-content pt-10 lg:pt-20 pb-10 lg:pb-20 text-md md:text-2xl lg:text-4xl ">Build your vision of <span>Lending</span> with Godspeed</h3>
+        </div>
+
+        <form class="w-full flex flex-col justify-center items-center 
+            md:flex-row lg:justify-center lg:items-center lg:gap-10 gap-4 pb-12 mt-8 lg:mt-12" method="POST">
+            <input type="text" id="inputdatavalue" name="email" placeholder="Enter your email to get early access" class="input-class" />
+           
+            <div class="flex justify-center items-center w-380 h-88 all-btns p-4">
+                
+                <button type="submit" id="submitbtn" class="lg:text-2xl accessbtn alert">GET EARLY ACCESS</button>
+                <!-- <div class="empty-div"></div> -->
+                <!-- <div class="empty-div"></div> -->
+            </div>
+        </form>
+       
+        <!-- <form class="w-full flex flex-col justify-ceneter items-center 
+        lg:flex-row lg:justify-center lg:items-center lg:gap-10 mt-10 gap-4 pb-12" method="POST">
+            
+            <input class="input1 p-4" id="inputdatavalue" name="email" placeholder="Enter your email to get early access" />
+            
+            <button type="submit" id="submitbtn" class="button1  p-4">GET EARLY ACCESS</button>
+
+        </form> -->
+    </div>
+</div>
+
+
+<style>
+
+    .input-class{
+        height: 88px;
+    width: 460px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 24px;
+    border-style: solid;
+    border-color: #FFFFFF;
+    
+    border-radius: 2px;
+    border-width: 1px;
+    background-color: transparent;
+    font-family: sans-serif;
+    margin-right: 20px;
+    color: #BDD4DE;
+    /* margin-top: 60px; */
+    }
+
+    .all-btns{
+        background-color: #FF8C00;
+        height: 88px;
+        opacity: 1;
+        color: rgba(0,0,0,1);
+        font-family: "DMSans-9ptRegular_Black";
+        font-size: 28px;
+        font-weight: 900;
+        font-style: normal;
+        letter-spacing: 2px;
+        text-align: center;
+        line-height: 32px;
+        /* width: 460px;
+        height: 88px;
+        display: flex;
+        justify-content: center;
+        align-items: center; */
+
+    }
+
+    .btn-div{
+        opacity: 1;
+    background-color: rgba(255,140,0, 1);
+    /* margin-top: 20px; */
+    width:380px;
+    /* height: 88px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .btn{
+        opacity: 1;
+    color: rgba(0,0,0,1);
+    font-family: sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+    font-style: normal;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 32px;
+    }
+
+    .empty-div{
+        box-shadow: 0px 16px 28px -20px ragb(199,58,0, 1);
+        opacity: 0.4;
+        background-color: rgba(255, 140, 0, 0.929);
+        height: 88px;
+        color: rgba(255,140,0, 1);
+        margin-top: 20px;
+        margin-left: 10px;
+        width: 20px;
+        
+        
+    }
+
+    @media (max-width:992px){
+
+        .img-form-div{
+            width:304px;
+        }
+        .accessbtn{
+            font-size: 16px;
+        }
+
+    .all-btns{
+        width: 280px;
+        /* height: 60px; */
+    }
+    .input-class{
+        width: 280px;
+        /* width: 80; */
+        margin-right:0px ;
+        height: 88px;
+        font-size: 15px;
+    }
+    .btn-div{
+        width: 220px;
+        height: 45px;
+    }
+    .btn{
+        font-size: 15px;
+    }
+    .empty-div{
+        height: 45px;
+        width: 18px;
+    }
+}
+
+
+
+
+
+
+
+
+.vision-container {
+    background-color: black;
+    padding: 100px;
+    color: azure;
+    text-align: center;
+    min-height: 100vh;
+
+}
+
+.heading1 {
+    letter-spacing: 4px;
+    line-height: 80px;
+    margin: 50px;
+    text-shadow: 2px 7px 5px rgba(151, 6, 6, 0.3), 
+    0px -4px 10px rgba(12, 148, 66, 0.3);
+}
+
+.inner-vision-container {
+    /* background: radial-gradient(ellipse at top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); */
+    /* background:  radial-gradient(ellipse at top, orangered,orangered,black, transparent); */
+    background-image: url("https://res.cloudinary.com/dfuwiecz0/image/upload/v1693996146/Godspeed/Designlogos/Oval-75_bl9mng.png");
+    background-size: cover;
+
+    background-position-x: 0;
+    background-position-y: 50%;
+    /* rgb(73, 29, 16) */
+    /* hwb(25 1% 8%) */
+}
+
+.inner-content {
+    opacity: 1;
+    color: rgba(255,255,255,1);
+    font-family: sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 2.57px;
+    text-align: center;
+}
+.form-container {
+    margin-top: 100px;
+    display: block;
+}
+
+.input1 {
+    /* height: 88px; */
+    /* width: 85%; */
+    height: 60px;
+    width: 280px;
+    color: #ADADAD;
+    font-weight: bold;
+
+    font-size: 1px;
+    border-style: solid;
+    border-color: beige;
+    border-radius: 8px;
+    border-width: 1px;
+    background-color: transparent;
+    font-family: sans-serif;
+
+    border-radius: 2px;
+    border: 1px solid rgba(255,255,255, 0.14);
+    opacity: 1;
+
+
+}
+
+
+.button1 {
+    /* height: 88px; */
+    /* width: 85%;  */
+    height: 60px;
+    /* width: 280px; */
+    background-color: #FF8C00;
+    color: rgba(0,0,0,1);
+    font-family: "DMSans-9ptRegular_Black";
+    /* border-style: none; */
+    font-weight: 900;
+    font-size: 16px;
+
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 1;
+    font-style: normal;
+    letter-spacing: 1.14px;
+    text-align: left;
+    line-height: 32px;
+
+
+
+}
+
+/* @media (min-width:768px){
+    .input1{
+        width: 60%;
+    }
+    .button1{
+        width: 60%;
+    }
+} */
+
+@media (min-width:992px){
+    .input1{
+        width: 604px;
+        height: 88px;
+        text-align: center;
+
+    }
+    .button1{
+        width:460px;
+        height: 88px;
+
+    }
+    .inner-vision-container{
+        width: 80%;
+    }
+}
+
+
+.span {
+    color: #fff;
+    font-weight: 900;
+    font-size: 36px;
+    font-family: sans-serif;
+    overflow: hidden; 
+    border-right: .15em solid orange; 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    letter-spacing: 2.57px;
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+ 
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
+
+
+</style>
+
+<script>
+    // Find all buttons with the `alert` class on the page.
+    const buttons = document.getElementById('submitbtn');
+    const abc = document.getElementById('parasubmitbtn');
+  
+  
+    // Handle clicks on each button.
+      buttons.addEventListener('click', () => {
+          alert("Email submitted successfully");
+      });
+  </script>

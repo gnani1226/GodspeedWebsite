@@ -2,21 +2,28 @@
 const title = 'Godspeed';
 import Layout from '../layouts/Layout.astro';
 import Section1 from '../components/Section1.astro';
+import NavigationDesign from '../components/NavigationDesign.astro';
 import Universe from '../components/Universe.astro';
 import Integrations from '../components/Integrations.astro';
 import SuccessStories from '../components/SuccessStories';
 import Testsuccess from '../components/Testsuccess.astro'
 import Buildoperate from '../components/Buildoperate.astro';
+import TestUniverse from '../components/TestUniverse.astro';
+import TestFooterDesign from "../components/TestFooterdesign.astro";
 
 ---
 
 <Layout title="Welcome to Godspeed.">
+	<div class="min-h-screen bg-black">
+	<NavigationDesign />
 	<Section1 />
 	<Buildoperate />
 	<Integrations />
 	 <Testsuccess />
-	<Universe />
-
+	<!-- <Universe /> -->
+	<TestUniverse />
+	<TestFooterDesign />
+</div>
 </Layout>
 <style>
 
