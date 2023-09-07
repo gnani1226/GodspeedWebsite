@@ -33,11 +33,11 @@ text-white text-opcity-100 pt-12 text-center w-full pl-10 pr-10 pb-12">
 
         <form class="w-full flex flex-col justify-center items-center 
             md:flex-row lg:justify-center lg:items-center lg:gap-10 gap-4 pb-12 mt-8 lg:mt-12" method="POST">
-            <input type="text" id="inputdatavalue" name="email" placeholder="Enter your email to get early access" class="input-class" />
+            <input type="text" id="inputdatavalue" name="email" placeholder="Enter your email to get early access" class="input-class1" />
            
             <div class="flex justify-center items-center w-380 h-88 all-btns p-4">
                 
-                <button type="submit" id="submitbtn" class="lg:text-2xl accessbtn alert">GET EARLY ACCESS</button>
+                <button type="submit" id="submitbtn1" class="lg:text-2xl accessbtn pt-8 flex justify-center items-center alert">GET EARLY ACCESS</button>
                 <!-- <div class="empty-div"></div> -->
                 <!-- <div class="empty-div"></div> -->
             </div>
@@ -48,7 +48,7 @@ text-white text-opcity-100 pt-12 text-center w-full pl-10 pr-10 pb-12">
             
             <input class="input1 p-4" id="inputdatavalue" name="email" placeholder="Enter your email to get early access" />
             
-            <button type="submit" id="submitbtn" class="button1  p-4">GET EARLY ACCESS</button>
+            <button type="submit" id="submitbtn1" class="button1  p-4">GET EARLY ACCESS</button>
 
         </form> -->
     </div>
@@ -57,7 +57,7 @@ text-white text-opcity-100 pt-12 text-center w-full pl-10 pr-10 pb-12">
 
 <style>
 
-    .input-class{
+    .input-class1{
         height: 88px;
     width: 460px;
     padding-left: 20px;
@@ -138,13 +138,14 @@ text-white text-opcity-100 pt-12 text-center w-full pl-10 pr-10 pb-12">
         }
         .accessbtn{
             font-size: 16px;
+            /* padding-top: 20px; */
         }
 
     .all-btns{
         width: 280px;
         /* height: 60px; */
     }
-    .input-class{
+    .input-class1{
         width: 280px;
         /* width: 80; */
         margin-right:0px ;
@@ -289,6 +290,9 @@ text-white text-opcity-100 pt-12 text-center w-full pl-10 pr-10 pb-12">
     .inner-vision-container{
         width: 80%;
     }
+    .accessbtn{
+        /* padding-top: 30px; */
+    }
 }
 
 
@@ -324,8 +328,8 @@ text-white text-opcity-100 pt-12 text-center w-full pl-10 pr-10 pb-12">
 
 <script>
     // Find all buttons with the `alert` class on the page.
-    const buttons = document.getElementById('submitbtn');
-    const abc = document.getElementById('parasubmitbtn');
+    const buttons = document.getElementById('submitbtn1');
+    const abc = document.getElementById('parasubmitbtn1');
   
   
     // Handle clicks on each button.
