@@ -1,0 +1,91 @@
+---
+
+import axios from 'axios';
+
+if (Astro.request.method === "POST") {
+  try {
+    const data = await Astro.request.formData();
+    const name1 = data.get("email");
+    const userdata = {
+        email: name1,
+    }
+    // axios.post('http://localhost:3003/users/create', userdata);
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
+}
+---
+
+<div class="h-screen w-full bg-image-div ">
+ 
+    <div class="w-50">
+         <div>
+        <p class="">ACHIEVE</p>
+        <h1 class="">QUANTUM LEAP </h1>  
+            <h1 class="">IN PRODUCTIVITY</h1>
+         </div>
+    
+        <div>
+            <h2 class="">Develop, Deploy & Monitor with Godspeed</h2>
+            <p class="">The next-gen application command center that integrates with your development stack.</p>
+        </div>
+        <form method="POST">
+            <input type="text" id="inputdatavalue" name="email" 
+            placeholder="Enter your email to get early access" class="" />
+        
+            <div class="">
+                <div class="">
+                    <button type="submit" id="submitbtn" class="">GET EARLY ACCESS</button>
+                </div>
+                    <div class=""></div>
+                    <div class=""></div>
+            </div>
+        </form>
+    </div>
+
+
+ 
+</div>
+
+<style>
+
+    .bg-image-div{
+        background: radial-gradient(circle at bottom right ,#FF8C00,
+        orangered,black,black,black,black);
+
+
+
+        /* background-image: url("https://res.cloudinary.com/dfuwiecz0/image/upload/v1694089145/Godspeed/Godspeed-all-assets/Hero_Illustration_-_Sun_appo8m.png"); */
+        /* background-size: cover; */
+    }
+
+    
+    </style>
+
+<script>
+  // Find all buttons with the `alert` class on the page.
+  const buttons = document.getElementById('submitbtn');
+  const abc = document.getElementById('parasubmitbtn');
+
+
+  // Handle clicks on each button.
+    buttons.addEventListener('click', () => {
+        alert("Email submitted successfully");
+    });
+</script>
+
+
+
+
+
+
+    <!-- To place one image on top of another image -->
+   <!-- <div class="relative">
+        <img src="https://res.cloudinary.com/dfuwiecz0/image/upload/v1694088934/Godspeed/Godspeed-all-assets/Oval-15_aaxmio.png" 
+        alt="First Image" class="w-full h-auto">
+        <img src="https://res.cloudinary.com/dfuwiecz0/image/upload/v1694088933/Godspeed/Godspeed-all-assets/Oval-16_m3wsao.png" 
+        alt="Second Image" class="absolute inset-20 w-full h-full opacity-50">
+      </div>
+       -->
