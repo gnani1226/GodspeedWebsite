@@ -1,13 +1,39 @@
+---
+import LineFooter from './LineFooter.astro'
+---
+
 <!-- <section class="nav-section">  -->
-<section class="w-full flex flex-col justify-center items-center bg-black pt-6"> 
+<section class="w-full flex flex-col justify-center items-center bg-black pt-6 pb-6"> 
 
     <!-- <ul class="menu-items gap-4"> -->
     <ul class="flex items-center gap-0 lg:gap-4 lg:mb-2">
 
-        <li class="text-white text-opacity-100 mt-2 ml-2 mr-2 md:mr-5 lg:text-2xl lg:mr-8 lg:ml-8 font-sans"><a href="https://www.linkedin.com/company/godspeed-systems/" target="_blank" class="link-class">LinkedIn</a></li>
-        <li class="text-white text-opacity-100 mt-2 ml-2 mr-2 md:mr-3 lg:mr-8 lg:text-2xl lg:ml-8 font-sans"><a href="https://discord.com/invite/E3WU9dT7UQ" target="_blank" class="link-class">Discord</a></li>
-        <li class="text-white text-opacity-100 mt-2 ml-2 mr-2 md:mr-3 lg:mr-8 lg:text-2xl lg:ml-8 font-sans"><a href="https://github.com/godspeedsystems/gs-node-service" target="_blank" class="link-class">GitHub</a></li>
-        <li class="text-white text-opacity-100 mt-2 ml-2 mr-2 md:mr-3 lg:mr-8 lg:text-2xl lg:ml-8 font-sans"><a href="https://docs.godspeed.systems/docs/preface" target="_blank" class="link-class">Documentation</a></li>
+        <LineFooter />
+        <div class="flex justify-center items-center">
+        <li class="text-white text-opacity-100 mt-2 ml-2 mr-2 md:mr-5 lg:text-2xl lg:mr-8 lg:ml-8 custom-list">
+            <a href="https://www.linkedin.com/company/godspeed-systems/" target="_blank" class="link-class">LinkedIn</a></li>
+        <LineFooter />
+
+        </div>
+        <div class="flex justify-center items-center">
+            <li class="text-white text-opacity-100 mt-2 ml-2 mr-2 md:mr-3 lg:mr-8 lg:text-2xl lg:ml-8 custom-list">
+                <a href="https://discord.com/invite/E3WU9dT7UQ" target="_blank" class="link-class">Discord</a></li>
+            <LineFooter />
+    
+        </div>
+       
+        <div class="flex justify-center items-center">
+            <li class="text-white text-opacity-100 mt-2 ml-2 mr-2 md:mr-3 lg:mr-8 lg:text-2xl lg:ml-8 custom-list">
+            <a href="https://github.com/godspeedsystems/gs-node-service" target="_blank" class="link-class">GitHub</a></li>
+        <LineFooter />
+       </div>
+       <div class="flex justify-center items-center">
+        <li class="text-white text-opacity-100 mt-2 ml-2 mr-2 md:mr-3 lg:mr-8 lg:text-2xl lg:ml-8 custom-list">
+            <a href="https://docs.godspeed.systems/docs/preface" target="_blank" class="link-class">Documentation</a></li>
+        <LineFooter />
+
+       </div>
+        
         
     </ul>
     <p class="copyright">&copy 2023 by Godspeed Systems</p>
@@ -49,9 +75,23 @@
             line-height: 16px;
             /* margin: 30px; */
         }
+
+        .custom-list{
+            opacity: 1;
+            color: rgba(255,255,255,1);
+            font-family: "DMSans-9ptRegular_Bold";
+            font-size: 16px;
+            font-weight: 700;
+            font-style: normal;
+            letter-spacing: 0px;
+            text-align: center;
+            line-height: 32px;
+        }
+
         .copyright {   
             opacity: 0.6;
-            color: rgba(204,204,204,1);
+            /* color: rgba(204,204,204,1); */
+            color: #cccccc;
             font-family: "DMSans-9ptRegular_Black";
             font-size: 16px;
             font-weight: 900;
