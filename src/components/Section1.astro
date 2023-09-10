@@ -10,6 +10,8 @@ if (Astro.request.method === "POST") {
         email: name1,
     }
     axios.post('http://localhost:3003/users/create', userdata);
+//    console.log(a.data);
+    
   } catch (error) {
     if (error instanceof Error) {
       console.error(error.message);
@@ -319,15 +321,47 @@ if (Astro.request.method === "POST") {
 
 </style>
 
-
 <script>
-  // Find all buttons with the `alert` class on the page.
+    document.getElementById("submitbtn").addEventListener("click", function (event) {
+  const emailInput = document.getElementById("inputdatavalue");
+  const email = emailInput.value;
+
+  if (!isValidEmail(email)) {
+    alert("Please enter a valid email address.");
+    event.preventDefault(); // Prevent form submission
+  }else{
+    alert("Your email address has been submitted.");
+    // emailInput.value = "";
+  }
+});
+
+function isValidEmail(email) {
+  // Regular expression for basic email validation
+  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+  return emailRegex.test(email);
+}
+
+    </script>
+
+<!-- 
+<script>
   const buttons = document.getElementById('submitbtn');
   const abc = document.getElementById('parasubmitbtn');
+  const email = buttons.value;
+
+  
 
 
-  // Handle clicks on each button.
     buttons.addEventListener('click', () => {
         alert("Email submitted successfully");
     });
-</script>
+
+    function isValidEmail(email) {
+  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+  return emailRegex.test(email);
+}
+
+
+</script> -->

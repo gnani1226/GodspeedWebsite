@@ -1,0 +1,183 @@
+---
+
+import axios from 'axios';
+
+if (Astro.request.method === "POST") {
+  try {
+    const data = await Astro.request.formData();
+    const name1 = data.get("email");
+    const userdata = {
+        email: name1,
+    }
+    // axios.post('http://localhost:3003/users/create', userdata);
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
+}
+---
+
+<div class="h-screen w-full bg-image-div ">
+ 
+      <div>
+        <p class="">ACHIEVE</p>
+          <div class="main-div pl-8">
+          <h1 class="heading">QUANTUM LEAP</h1>
+          <div class="'word">
+
+          </div>
+
+          </div>
+
+        <!-- <h1 class="heading"><span class="ml-4">QUANTUM LEAP</span>   
+            <h1 class="">IN PRODUCTIVITY</h1>
+            <div class="ml-10 message">
+              <div class="word1">IN PRODUCTIVITY</div>
+              <div class="word2">IN INTEGRATION</div>
+              <div class="word3">IN DESIGN</div>
+
+         </div>
+        </h1> -->
+        <div>
+            <h2 class="">Develop, Deploy & Monitor with Godspeed</h2>
+            <p class="">The next-gen application command center that integrates with your development stack.</p>
+        </div>
+        <form method="POST">
+            <input type="text" id="inputdatavalue" name="email" 
+            placeholder="Enter your email to get early access" class="" />
+        
+            <div class="">
+                <div class="">
+                    <button type="submit" id="submitbtn" class="">GET EARLY ACCESS</button>
+                </div>
+                    <div class=""></div>
+                    <div class=""></div>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+<style>
+
+
+.word {
+  margin: auto;
+  color: white;
+  font: 700 normal 2.5em 'tahoma';
+  text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
+  background-color: yellow;
+}
+.main-div{
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .bg-image-div{
+        background: radial-gradient(circle at bottom right ,#FF8C00,
+        orangered,black,black,black,black);
+
+
+
+        /* background-image: url("https://res.cloudinary.com/dfuwiecz0/image/upload/v1694089145/Godspeed/Godspeed-all-assets/Hero_Illustration_-_Sun_appo8m.png"); */
+        /* background-size: cover; */
+    }
+
+    
+    </style>
+
+<script>
+  // Find all buttons with the `alert` class on the page.
+  const buttons = document.getElementById('submitbtn');
+  const abc = document.getElementById('parasubmitbtn');
+
+
+  // Handle clicks on each button.
+    buttons.addEventListener('click', () => {
+        alert("Email submitted successfully");
+    });
+
+
+
+    // *******************************************
+
+    var words = ['IN PRODUCTION', 'IN INTEGRATION', 'IN DESIGN'],
+    part,
+    i = 0,
+    offset = 0,
+    len = words.length,
+    forwards = true,
+    skip_count = 0,
+
+  skip_delay = 15,
+    speed = 70;
+var wordflick = function () {
+  setInterval(function () {
+    if (forwards) {
+      if (offset >= words[i].length) {
+        ++skip_count;
+        if (skip_count == skip_delay) {
+          forwards = false;
+          skip_count = 0;
+        }
+      }
+    }
+    else {
+      if (offset == 0) {
+        forwards = true;
+        i++;
+        offset = 0;
+        if (i >= len) {
+          i = 0;
+        }
+      }
+    }
+    part = words[i].substr(0, offset);
+    if (skip_count == 0) {
+      if (forwards) {
+        offset++;
+      }
+      else {
+        offset--;
+      }
+    }
+    $('.word').text(part);
+  },speed);
+};
+
+$(document).ready(function () {
+  wordflick();
+});
+
+
+
+</script>
+
+
+
+
+
+
+    <!-- To place one image on top of another image -->
+   <!-- <div class="relative">
+        <img src="https://res.cloudinary.com/dfuwiecz0/image/upload/v1694088934/Godspeed/Godspeed-all-assets/Oval-15_aaxmio.png" 
+        alt="First Image" class="w-full h-auto">
+        <img src="https://res.cloudinary.com/dfuwiecz0/image/upload/v1694088933/Godspeed/Godspeed-all-assets/Oval-16_m3wsao.png" 
+        alt="Second Image" class="absolute inset-20 w-full h-full opacity-50">
+      </div>
+       -->

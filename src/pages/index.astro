@@ -9,23 +9,26 @@ import SuccessStories from '../components/SuccessStories';
 import Testsuccess from '../components/Testsuccess.astro'
 import Buildoperate from '../components/Buildoperate.astro';
 import TestUniverse from '../components/TestUniverse.astro';
-import TestFooterDesign from "../components/TestFooterdesign.astro";
+import TestFooterdesign from "../components/TestFooterdesign.astro";
+import TestSection1 from '../components/TestSection1.astro';
 
 ---
 
 <Layout title="Godspeed Systems | Develop, Deploy & Monitor your tech stacks at ease">
-	<div class="min-h-screen bg-black">
+	<div class="min-h-screen bg-black custom-div backdrop-blur-lg">
 	<NavigationDesign />
 	<Section1 />
+	<!-- <TestSection1 /> -->
 	<Buildoperate />
 	<Integrations />
 	 <Testsuccess />
-	<!-- <Universe /> -->
 	<TestUniverse />
-	<TestFooterDesign />
+	<TestFooterdesign />
 </div>
 </Layout>
 <style>
-
+	.custom-div{
+		opacity: 1;		
+	}
 
 </style>
