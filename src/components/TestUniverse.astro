@@ -33,7 +33,7 @@ if (Astro.request.method === "POST") {
 
         <form class="w-full flex flex-col justify-center items-center 
             md:flex-row lg:justify-center lg:items-center lg:gap-10 gap-4 pb-12 mt-8 lg:mt-12" method="POST">
-            <input type="text" id="inputdatavalue" name="email" placeholder="Enter your email to get early access" class="input-class1" />
+            <input type="text" id="inputdatavalue1" name="email" placeholder="Enter your email to get early access" class="input-class1" />
            
             <div class="flex justify-center items-center w-380 all-btns p-4">
                 
@@ -296,7 +296,7 @@ if (Astro.request.method === "POST") {
 
 </style>
 
-<script>
+<!-- <script>
     // Find all buttons with the `alert` class on the page.
     const buttons = document.getElementById('submitbtn1');
     const abc = document.getElementById('parasubmitbtn1');
@@ -306,4 +306,27 @@ if (Astro.request.method === "POST") {
       buttons.addEventListener('click', () => {
           alert("Email submitted successfully");
       });
-  </script>
+  </script> -->
+
+<script>
+    document.getElementById("submitbtn1").addEventListener("click", function (event) {
+  const emailInput1 = document.getElementById("inputdatavalue1");
+  const email1 = emailInput1.value;
+
+  if (!isValidEmail(email1)) {
+    alert("Please enter a valid email address.");
+    event.preventDefault(); // Prevent form submission
+  }else{
+    alert("Your email address has been submitted.");
+    // emailInput.value = "";
+  }
+});
+
+function isValidEmail(email1) {
+  // Regular expression for basic email validation
+  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+  return emailRegex.test(email1);
+}
+
+    </script>

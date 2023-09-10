@@ -20,13 +20,25 @@ if (Astro.request.method === "POST") {
 
 <div class="h-screen w-full bg-image-div ">
  
-    <div class="w-50">
-         <div>
+      <div>
         <p class="">ACHIEVE</p>
-        <h1 class="">QUANTUM LEAP </h1>  
+          <div class="main-div pl-8">
+          <h1 class="heading">QUANTUM LEAP</h1>
+          <div class="'word">
+
+          </div>
+
+          </div>
+
+        <!-- <h1 class="heading"><span class="ml-4">QUANTUM LEAP</span>   
             <h1 class="">IN PRODUCTIVITY</h1>
+            <div class="ml-10 message">
+              <div class="word1">IN PRODUCTIVITY</div>
+              <div class="word2">IN INTEGRATION</div>
+              <div class="word3">IN DESIGN</div>
+
          </div>
-    
+        </h1> -->
         <div>
             <h2 class="">Develop, Deploy & Monitor with Godspeed</h2>
             <p class="">The next-gen application command center that integrates with your development stack.</p>
@@ -45,11 +57,36 @@ if (Astro.request.method === "POST") {
         </form>
     </div>
 
-
- 
 </div>
 
 <style>
+
+
+.word {
+  margin: auto;
+  color: white;
+  font: 700 normal 2.5em 'tahoma';
+  text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
+  background-color: yellow;
+}
+.main-div{
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     .bg-image-div{
         background: radial-gradient(circle at bottom right ,#FF8C00,
@@ -74,6 +111,61 @@ if (Astro.request.method === "POST") {
     buttons.addEventListener('click', () => {
         alert("Email submitted successfully");
     });
+
+
+
+    // *******************************************
+
+    var words = ['IN PRODUCTION', 'IN INTEGRATION', 'IN DESIGN'],
+    part,
+    i = 0,
+    offset = 0,
+    len = words.length,
+    forwards = true,
+    skip_count = 0,
+
+  skip_delay = 15,
+    speed = 70;
+var wordflick = function () {
+  setInterval(function () {
+    if (forwards) {
+      if (offset >= words[i].length) {
+        ++skip_count;
+        if (skip_count == skip_delay) {
+          forwards = false;
+          skip_count = 0;
+        }
+      }
+    }
+    else {
+      if (offset == 0) {
+        forwards = true;
+        i++;
+        offset = 0;
+        if (i >= len) {
+          i = 0;
+        }
+      }
+    }
+    part = words[i].substr(0, offset);
+    if (skip_count == 0) {
+      if (forwards) {
+        offset++;
+      }
+      else {
+        offset--;
+      }
+    }
+    $('.word').text(part);
+  },speed);
+};
+
+$(document).ready(function () {
+  wordflick();
+});
+
+
+
 </script>
 
 
